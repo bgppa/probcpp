@@ -1,4 +1,4 @@
-A minimal C++ library demonstrating object-oriented programming and
+A minimal C++17 library demonstrating object-oriented programming and
 polymorphism through a small probability simulation.
 
 
@@ -12,5 +12,3 @@ make test
 ### Clean
 make clean
 
-
-Requires C++17 support.
