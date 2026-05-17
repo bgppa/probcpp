@@ -23,7 +23,7 @@ public:
 	// this was also pure virtual in the base class
 	[[nodiscard]] std::string name() const override;
 
-	[[nodiscard]] double theorerical_mean() const {return p_;};
-	[[nodiscard]] double theoretical_variance() const {return 1. - p_;};
+	[[nodiscard]] double theoretical_mean() const {return p_;};
+	[[nodiscard]] double theoretical_variance() const {return p_*(1. - p_);};
 
 };

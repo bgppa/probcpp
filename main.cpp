@@ -10,18 +10,20 @@ int main() {
 
 	dists.push_back(std::make_unique<BernoulliDistribution>(p1));
 	dists.push_back(std::make_unique<BernoulliDistribution>(p2));
-
-	std::cout << "10 coins with " << p1 << std::endl;
+	
+	std::cout << "---- SIMPLE EXAMPLE ---" << std::endl;
+	std::cout << "---> 10 coins with " << p1 << std::endl;
 	for (int i = 0; i < 10; ++i) {
 		std::cout << dists.at(0)->sample() << " ";
 	}
 	std::cout << std::endl;
 
-	std::cout << "10 coins with " << p2 << std::endl;
+	std::cout << "---> 10 coins with " << p2 << std::endl;
 	for (int i = 0; i < 10; ++i) {
 		std::cout << dists.at(1)->sample() << " ";
 	}
 	std::cout << std::endl;
+	std::cout << "-----------------------" << std::endl;
 
 	return 0;
 }

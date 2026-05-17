@@ -4,7 +4,7 @@ CXXFLAGS := -std=c++17 -Wall -Wextra
 TARGET	 := probcpp
 OBJ	 := bernoulli.o distribution.o
 
-.PHONY: test clean run
+.PHONY: test, clean, run
 
 $(TARGET): $(OBJ) main.cpp
 	$(CXX) $(CXXFLAGS) main.cpp $(OBJ) -o $(TARGET)
@@ -17,11 +17,12 @@ distribution.o: distribution.cpp distribution.hpp
 bernoulli.o: bernoulli.cpp bernoulli.hpp
 	$(CXX) $(CXXFLAGS) -c bernoulli.cpp bernoulli.hpp
 
-clean: $(TARGET)
-	rm -rf $(TARGET) $(OBJ) *.pch
+clean: 
+	rm -rf $(TARGET) $(OBJ) *.pch test
 
-test: $(TARGET)
-	echo "To do"
+test: $(OBJ) test.cpp
+	$(CXX) $(CXXFLAGS) test.cpp $(OBJ) -o test
+	./test	
 
 run: $(TARGET)
 	./$(TARGET)
