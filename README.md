@@ -2,14 +2,14 @@ A minimal C++ library demonstrating object-oriented programming and
 polymorphism through a small probability simulation.
 
 
-## Build & run
+### Build & run
 make
 ./probcpp
 
-# Tests
+### Tests
 make test
 
-# Clean
+### Clean
 make clean
 
 
